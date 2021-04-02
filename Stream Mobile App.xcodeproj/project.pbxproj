@@ -15,6 +15,7 @@
 		D1A07FE92615302700FAAEEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A07FE72615302700FAAEEE /* LaunchScreen.storyboard */; };
 		D1A080032617165E00FAAEEE /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A080022617165E00FAAEEE /* RegistrationViewController.swift */; };
 		D1A08007261716CD00FAAEEE /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A08006261716CD00FAAEEE /* VerificationViewController.swift */; };
+		D1A080152617639C00FAAEEE /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A080142617639C00FAAEEE /* PersonalInfoViewController.swift */; };
 		F09124E8C8970A386434138A /* Pods_Stream_Mobile_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F77E3F5EA4276DDA2FB265C /* Pods_Stream_Mobile_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		D1A07FEA2615302700FAAEEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1A080022617165E00FAAEEE /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
 		D1A08006261716CD00FAAEEE /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
+		D1A080142617639C00FAAEEE /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
 		FC884579E5F4B1982A5C40DD /* Pods-Stream Mobile App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stream Mobile App.release.xcconfig"; path = "Target Support Files/Pods-Stream Mobile App/Pods-Stream Mobile App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +112,7 @@
 				D1A07FE02615302000FAAEEE /* ViewController.swift */,
 				D1A080022617165E00FAAEEE /* RegistrationViewController.swift */,
 				D1A08006261716CD00FAAEEE /* VerificationViewController.swift */,
+				D1A080142617639C00FAAEEE /* PersonalInfoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				D1A07FDD2615302000FAAEEE /* AppDelegate.swift in Sources */,
 				D1A08007261716CD00FAAEEE /* VerificationViewController.swift in Sources */,
 				D1A07FDF2615302000FAAEEE /* SceneDelegate.swift in Sources */,
+				D1A080152617639C00FAAEEE /* PersonalInfoViewController.swift in Sources */,
 				D1A080032617165E00FAAEEE /* RegistrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -57,5 +57,6 @@ extension VerificationViewController: OTPFieldViewDelegate {
     
     func enteredOTP(otp otpString: String) {
         print("OTPString: \(otpString)")
+        
     }
 }
