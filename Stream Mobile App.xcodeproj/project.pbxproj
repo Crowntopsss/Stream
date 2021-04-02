@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,9 +13,14 @@
 		D1A07FE42615302000FAAEEE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A07FE22615302000FAAEEE /* Main.storyboard */; };
 		D1A07FE62615302700FAAEEE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1A07FE52615302700FAAEEE /* Assets.xcassets */; };
 		D1A07FE92615302700FAAEEE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1A07FE72615302700FAAEEE /* LaunchScreen.storyboard */; };
+		D1A080032617165E00FAAEEE /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A080022617165E00FAAEEE /* RegistrationViewController.swift */; };
+		D1A08007261716CD00FAAEEE /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A08006261716CD00FAAEEE /* VerificationViewController.swift */; };
+		F09124E8C8970A386434138A /* Pods_Stream_Mobile_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F77E3F5EA4276DDA2FB265C /* Pods_Stream_Mobile_App.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		62747E90BB24D5B503AAA6B9 /* Pods-Stream Mobile App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stream Mobile App.debug.xcconfig"; path = "Target Support Files/Pods-Stream Mobile App/Pods-Stream Mobile App.debug.xcconfig"; sourceTree = "<group>"; };
+		9F77E3F5EA4276DDA2FB265C /* Pods_Stream_Mobile_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stream_Mobile_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A07FD92615302000FAAEEE /* Stream Mobile App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stream Mobile App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A07FDC2615302000FAAEEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1A07FDE2615302000FAAEEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,9 @@
 		D1A07FE52615302700FAAEEE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D1A07FE82615302700FAAEEE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D1A07FEA2615302700FAAEEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1A080022617165E00FAAEEE /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		D1A08006261716CD00FAAEEE /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
+		FC884579E5F4B1982A5C40DD /* Pods-Stream Mobile App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stream Mobile App.release.xcconfig"; path = "Target Support Files/Pods-Stream Mobile App/Pods-Stream Mobile App.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F09124E8C8970A386434138A /* Pods_Stream_Mobile_App.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00A620C359A21C1BF8A15103 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62747E90BB24D5B503AAA6B9 /* Pods-Stream Mobile App.debug.xcconfig */,
+				FC884579E5F4B1982A5C40DD /* Pods-Stream Mobile App.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		34A8D79BFB691DE7B254B97A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9F77E3F5EA4276DDA2FB265C /* Pods_Stream_Mobile_App.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D1A07FD02615302000FAAEEE = {
 			isa = PBXGroup;
 			children = (
 				D1A07FDB2615302000FAAEEE /* Stream Mobile App */,
 				D1A07FDA2615302000FAAEEE /* Products */,
+				00A620C359A21C1BF8A15103 /* Pods */,
+				34A8D79BFB691DE7B254B97A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +84,41 @@
 		D1A07FDB2615302000FAAEEE /* Stream Mobile App */ = {
 			isa = PBXGroup;
 			children = (
+				D1A07FFC2617110500FAAEEE /* Models */,
+				D1A07FFB261710FF00FAAEEE /* Controllers */,
+				D1A07FF626170FF500FAAEEE /* Views */,
 				D1A07FDC2615302000FAAEEE /* AppDelegate.swift */,
 				D1A07FDE2615302000FAAEEE /* SceneDelegate.swift */,
-				D1A07FE02615302000FAAEEE /* ViewController.swift */,
-				D1A07FE22615302000FAAEEE /* Main.storyboard */,
 				D1A07FE52615302700FAAEEE /* Assets.xcassets */,
 				D1A07FE72615302700FAAEEE /* LaunchScreen.storyboard */,
 				D1A07FEA2615302700FAAEEE /* Info.plist */,
 			);
 			path = "Stream Mobile App";
+			sourceTree = "<group>";
+		};
+		D1A07FF626170FF500FAAEEE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D1A07FE22615302000FAAEEE /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D1A07FFB261710FF00FAAEEE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D1A07FE02615302000FAAEEE /* ViewController.swift */,
+				D1A080022617165E00FAAEEE /* RegistrationViewController.swift */,
+				D1A08006261716CD00FAAEEE /* VerificationViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D1A07FFC2617110500FAAEEE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +128,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1A07FED2615302700FAAEEE /* Build configuration list for PBXNativeTarget "Stream Mobile App" */;
 			buildPhases = (
+				2A97474BF68B3414404EE20C /* [CP] Check Pods Manifest.lock */,
 				D1A07FD52615302000FAAEEE /* Sources */,
 				D1A07FD62615302000FAAEEE /* Frameworks */,
 				D1A07FD72615302000FAAEEE /* Resources */,
+				AB65D551D68236516719B676 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +188,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2A97474BF68B3414404EE20C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stream Mobile App-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB65D551D68236516719B676 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stream Mobile App/Pods-Stream Mobile App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stream Mobile App/Pods-Stream Mobile App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Stream Mobile App/Pods-Stream Mobile App-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D1A07FD52615302000FAAEEE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -139,7 +237,9 @@
 			files = (
 				D1A07FE12615302000FAAEEE /* ViewController.swift in Sources */,
 				D1A07FDD2615302000FAAEEE /* AppDelegate.swift in Sources */,
+				D1A08007261716CD00FAAEEE /* VerificationViewController.swift in Sources */,
 				D1A07FDF2615302000FAAEEE /* SceneDelegate.swift in Sources */,
+				D1A080032617165E00FAAEEE /* RegistrationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,6 +383,7 @@
 		};
 		D1A07FEE2615302700FAAEEE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62747E90BB24D5B503AAA6B9 /* Pods-Stream Mobile App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +403,7 @@
 		};
 		D1A07FEF2615302700FAAEEE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC884579E5F4B1982A5C40DD /* Pods-Stream Mobile App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
