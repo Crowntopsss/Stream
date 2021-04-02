@@ -339,8 +339,11 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MLW-VT-Azf" customClass="OTPFieldView" customModule="OTPFieldView">
-                                <rect key="frame" x="40" y="217.5" width="295" height="52.5"/>
+                                <rect key="frame" x="40" y="217.5" width="295" height="60"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="D1N-Pj-FS0"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iVl-eg-fpc"/>
@@ -353,7 +356,6 @@
                             <constraint firstItem="rw4-FB-5eF" firstAttribute="top" secondItem="BKe-ca-Nj9" secondAttribute="bottom" constant="63" id="QRn-h0-p9s"/>
                             <constraint firstItem="MLW-VT-Azf" firstAttribute="top" secondItem="rw4-FB-5eF" secondAttribute="bottom" constant="30" id="Wwz-X2-ORU"/>
                             <constraint firstItem="BKe-ca-Nj9" firstAttribute="baseline" secondItem="oMT-kw-9nE" secondAttribute="baseline" id="Xvr-dJ-Prm"/>
-                            <constraint firstItem="iVl-eg-fpc" firstAttribute="bottom" secondItem="MLW-VT-Azf" secondAttribute="bottom" constant="397" id="btY-bJ-uSS"/>
                             <constraint firstItem="oMT-kw-9nE" firstAttribute="top" secondItem="iVl-eg-fpc" secondAttribute="top" constant="20" id="ccs-8N-uGh"/>
                             <constraint firstItem="iVl-eg-fpc" firstAttribute="trailing" secondItem="MLW-VT-Azf" secondAttribute="trailing" constant="40" id="f03-of-bCP"/>
                             <constraint firstItem="BKe-ca-Nj9" firstAttribute="leading" secondItem="iVl-eg-fpc" secondAttribute="leading" constant="20" id="hpO-bI-Fij"/>
@@ -361,7 +363,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="OtpField" destination="MLW-VT-Azf" id="UCz-Oy-kfu"/>
+                        <outlet property="otpTextFieldView" destination="MLW-VT-Azf" id="uKt-bT-Wfc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wbx-tv-DSM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
