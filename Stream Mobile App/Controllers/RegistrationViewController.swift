@@ -29,4 +29,7 @@ class RegistrationViewController: UIViewController {
         self.performSegue(withIdentifier: "goToVerification", sender:self )
     }
     
+    @IBAction func backToStart(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }

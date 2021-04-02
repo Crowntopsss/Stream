@@ -23,8 +23,8 @@ class VerificationViewController: UIViewController {
         self.otpTextFieldView.fieldsCount = 6
         self.otpTextFieldView.fieldBorderWidth = 0.5
         self.otpTextFieldView.defaultBorderColor = UIColor.black
-        self.otpTextFieldView.filledBorderColor = UIColor.green
-        self.otpTextFieldView.cursorColor = #colorLiteral(red: 0, green: 0.3607843137, blue: 0.9333333333, alpha: 1)
+        self.otpTextFieldView.filledBorderColor = #colorLiteral(red: 0, green: 0.3607843137, blue: 0.9333333333, alpha: 1)
+        self.otpTextFieldView.cursorColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         self.otpTextFieldView.displayType = .underlinedBottom
         self.otpTextFieldView.fieldSize = 40
         self.otpTextFieldView.separatorSpace = 8
@@ -39,6 +39,9 @@ class VerificationViewController: UIViewController {
         case square
         case diamond
         case underlinedBottom
+    }
+    @IBAction func bactToRegistration(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
