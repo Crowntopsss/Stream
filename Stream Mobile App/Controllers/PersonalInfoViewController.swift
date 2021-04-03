@@ -11,12 +11,22 @@ class PersonalInfoViewController: UIViewController {
 
     @IBOutlet weak var birthDate: UITextField!
     let datePicker = UIDatePicker()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        createDatePicker()
     }
     
+    @IBAction func goToPinPage(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "goToPin", sender:self )
+
+        
+    }
+    @IBAction func backToVerifiction(_ sender: Any) {
+            self.dismiss(animated: true, completion: nil)
+    }
     func createDatePicker() {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()

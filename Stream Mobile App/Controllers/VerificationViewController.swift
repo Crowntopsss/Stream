@@ -57,6 +57,11 @@ extension VerificationViewController: OTPFieldViewDelegate {
     
     func enteredOTP(otp otpString: String) {
         print("OTPString: \(otpString)")
+        if otpString == "111111"{
+            self.performSegue(withIdentifier: "goToPersonalInfo", sender:self )
+        }else{
+            print("wrong OTP")
+        }
         
     }
 }
