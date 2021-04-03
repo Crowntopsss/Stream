@@ -10,13 +10,24 @@ import UIKit
 class PersonalInfoViewController: UIViewController {
 
     @IBOutlet weak var birthDate: UITextField!
+    @IBOutlet weak var genderPick: UITextField!
+    
     let datePicker = UIDatePicker()
+    let genderPicker = UIPickerView()
+    
+    let gender = ["Male","Female"]
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
         createDatePicker()
+        
+        genderPicker.dataSource = self
+        genderPicker.delegate = self
+        
+        genderPick.inputView = genderPicker
     }
     
     @IBAction func goToPinPage(_ sender: UIButton) {
@@ -50,4 +61,22 @@ class PersonalInfoViewController: UIViewController {
     }
 
 
+}
+extension PersonalInfoViewController: UIPickerViewDelegate, UIPickerViewDataSource {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return gender.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return gender[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        genderPick.text = gender[row]
+        genderPick.resignFirstResponder()
+    }
+    
 }

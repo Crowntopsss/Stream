@@ -6,6 +6,7 @@ target 'Stream Mobile App' do
   use_frameworks!
 
   # Pods for Stream Mobile App
-    pod ‘OTPFieldView’
+    pod 'OTPFieldView'
+    pod 'IQKeyboardManagerSwift'
 
 end
