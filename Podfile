@@ -8,5 +8,7 @@ target 'Stream Mobile App' do
   # Pods for Stream Mobile App
     pod 'OTPFieldView'
     pod 'IQKeyboardManagerSwift'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Firestore'
 
 end

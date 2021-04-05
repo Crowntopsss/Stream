@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D17EAB9A261BBA5F005101D5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D17EAB99261BBA5F005101D5 /* GoogleService-Info.plist */; };
 		D1A07FDD2615302000FAAEEE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A07FDC2615302000FAAEEE /* AppDelegate.swift */; };
 		D1A07FDF2615302000FAAEEE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A07FDE2615302000FAAEEE /* SceneDelegate.swift */; };
 		D1A07FE12615302000FAAEEE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A07FE02615302000FAAEEE /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		62747E90BB24D5B503AAA6B9 /* Pods-Stream Mobile App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stream Mobile App.debug.xcconfig"; path = "Target Support Files/Pods-Stream Mobile App/Pods-Stream Mobile App.debug.xcconfig"; sourceTree = "<group>"; };
 		9F77E3F5EA4276DDA2FB265C /* Pods_Stream_Mobile_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stream_Mobile_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D17EAB99261BBA5F005101D5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D1A07FD92615302000FAAEEE /* Stream Mobile App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stream Mobile App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1A07FDC2615302000FAAEEE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1A07FDE2615302000FAAEEE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				D1A07FE52615302700FAAEEE /* Assets.xcassets */,
 				D1A07FE72615302700FAAEEE /* LaunchScreen.storyboard */,
 				D1A07FEA2615302700FAAEEE /* Info.plist */,
+				D17EAB99261BBA5F005101D5 /* GoogleService-Info.plist */,
 			);
 			path = "Stream Mobile App";
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1A07FE92615302700FAAEEE /* LaunchScreen.storyboard in Resources */,
+				D17EAB9A261BBA5F005101D5 /* GoogleService-Info.plist in Resources */,
 				D1A07FE62615302700FAAEEE /* Assets.xcassets in Resources */,
 				D1A07FE42615302000FAAEEE /* Main.storyboard in Resources */,
 			);
