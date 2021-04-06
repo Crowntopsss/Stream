@@ -6,9 +6,13 @@
 //
 
 import UIKit
+import Firebase
 
 class RegistrationViewController: UIViewController {
 
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,9 +30,18 @@ class RegistrationViewController: UIViewController {
     }
     */
     @IBAction func SendVerification(_ sender: UIButton) {
-        self.performSegue(withIdentifier: "goToVerification", sender:self )
+        if let email =  emailTextField.text, let password = passwordTextField.text{
+            
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                if let e = error{
+                    print(e)
+                }else{
+                    self.performSegue(withIdentifier: "goToVerification", sender:self )
+                }
+            }
+            
+        }
     }
-    
     @IBAction func backToStart(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }

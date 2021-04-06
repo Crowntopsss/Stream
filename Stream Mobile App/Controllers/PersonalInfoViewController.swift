@@ -6,16 +6,22 @@
 //
 
 import UIKit
+import Firebase
 
 class PersonalInfoViewController: UIViewController {
+    
+    let db = Firestore.firestore()
 
     @IBOutlet weak var birthDate: UITextField!
     @IBOutlet weak var genderPick: UITextField!
     
+    @IBOutlet weak var phoneNumber: UITextField!
+    @IBOutlet weak var fullName: UITextField!
+    
     let datePicker = UIDatePicker()
     let genderPicker = UIPickerView()
     
-    let gender = ["Male","Female"]
+    let gendertype = ["Male","Female"]
     
     
     
@@ -31,6 +37,17 @@ class PersonalInfoViewController: UIViewController {
     }
     
     @IBAction func goToPinPage(_ sender: UIButton) {
+        if let birthDay = birthDate.text, let gender = genderPick.text, let phoneNo = phoneNumber.text, let fullPersonName = fullName.text, let sender = Auth.auth().currentUser?.email {
+            db.collection("PersonalInfo").addDocument(data: ["fullName" : fullPersonName, "phoneNumber":phoneNo, "gender":gender, "birthday": birthDay, "sendeer": sender]) { (error) in
+                if let e = error{
+                    print(e)
+                }else {
+                    print("successfull added data")
+                }
+            }
+            
+        }
+        
         self.performSegue(withIdentifier: "goToPin", sender:self )
 
         
@@ -68,14 +85,14 @@ extension PersonalInfoViewController: UIPickerViewDelegate, UIPickerViewDataSour
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return gender.count
+        return gendertype.count
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return gender[row]
+        return gendertype[row]
     }
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        genderPick.text = gender[row]
+        genderPick.text = gendertype[row]
         genderPick.resignFirstResponder()
     }
     

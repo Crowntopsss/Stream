@@ -11,6 +11,7 @@ import OTPFieldView
 class PinViewController: UIViewController {
 
     @IBOutlet weak var pinField: OTPFieldView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,7 +19,7 @@ class PinViewController: UIViewController {
        
     }
     func setupPinView(){
-        self.pinField.fieldsCount = 6
+        self.pinField.fieldsCount = 4
         self.pinField.secureEntry = true
         self.pinField.fieldBorderWidth = 0.5
         self.pinField.filledBackgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
@@ -44,6 +45,8 @@ class PinViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    @IBAction func pinCreated(_ sender: Any) {
+    }
 }
 extension PinViewController: OTPFieldViewDelegate {
     func hasEnteredAllOTP(hasEnteredAll hasEntered: Bool) -> Bool {

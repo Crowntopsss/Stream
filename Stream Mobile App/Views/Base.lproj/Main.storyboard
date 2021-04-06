@@ -165,13 +165,13 @@
                                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Phone Number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cSy-Ar-3Ic">
-                                                <rect key="frame" x="4" y="28.5" width="96.5" height="30"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="*********" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cSy-Ar-3Ic">
+                                                <rect key="frame" x="4" y="28.5" width="58.5" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="30" id="S4c-s8-Kr5"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="41k-Ln-bbo">
                                                 <rect key="frame" x="4" y="57.5" width="331" height="1"/>
@@ -251,6 +251,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="0ie-1L-8DT"/>
                     <connections>
+                        <outlet property="emailTextField" destination="J1Y-hG-3T8" id="4t2-7g-GL1"/>
+                        <outlet property="passwordTextField" destination="cSy-Ar-3Ic" id="rdf-Yl-JeY"/>
                         <segue destination="TNv-9P-vd5" kind="presentation" identifier="goToVerification" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="dqc-Ho-lcB"/>
                     </connections>
                 </viewController>
@@ -605,7 +607,9 @@
                     </view>
                     <connections>
                         <outlet property="birthDate" destination="tnE-TD-S83" id="cNS-xr-N5X"/>
+                        <outlet property="fullName" destination="QTT-KX-yWz" id="h03-R2-Wdl"/>
                         <outlet property="genderPick" destination="azq-M2-IWm" id="xzn-eO-eDF"/>
+                        <outlet property="phoneNumber" destination="tqD-XR-FZx" id="tsm-7j-Lan"/>
                         <segue destination="HPG-G8-SVQ" kind="presentation" identifier="goToPin" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="vl5-RH-Oj4"/>
                     </connections>
                 </viewController>
@@ -662,16 +666,29 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OMk-7b-ZLS">
+                                <rect key="frame" x="54.5" y="597" width="266" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="266" id="2mM-L5-u2R"/>
+                                    <constraint firstAttribute="height" constant="45" id="Itl-to-ZVD"/>
+                                </constraints>
+                                <state key="normal" image="pinButton"/>
+                                <connections>
+                                    <action selector="pinCreated:" destination="HPG-G8-SVQ" eventType="touchUpInside" id="XiE-ex-TFq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dNO-0B-tdt"/>
                         <color key="backgroundColor" name="Blue"/>
                         <constraints>
+                            <constraint firstItem="OMk-7b-ZLS" firstAttribute="centerX" secondItem="dNO-0B-tdt" secondAttribute="centerX" id="4IP-Ce-YoE"/>
                             <constraint firstItem="tDr-xK-Eh0" firstAttribute="centerX" secondItem="dNO-0B-tdt" secondAttribute="centerX" id="7DF-oZ-f2D"/>
                             <constraint firstItem="lUz-vK-7gQ" firstAttribute="centerX" secondItem="5vs-ZM-kfp" secondAttribute="centerX" id="PoR-AT-JVf"/>
                             <constraint firstItem="lUz-vK-7gQ" firstAttribute="top" secondItem="l5k-ha-QzT" secondAttribute="bottom" constant="15" id="QbG-L8-YXc"/>
                             <constraint firstItem="tDr-xK-Eh0" firstAttribute="top" secondItem="dNO-0B-tdt" secondAttribute="top" constant="50" id="Rm0-DA-mNR"/>
                             <constraint firstItem="l5k-ha-QzT" firstAttribute="centerX" secondItem="5vs-ZM-kfp" secondAttribute="centerX" id="UXZ-6F-Cpk"/>
                             <constraint firstItem="433-se-h60" firstAttribute="top" secondItem="tDr-xK-Eh0" secondAttribute="bottom" constant="25" id="VpZ-9a-WDN"/>
+                            <constraint firstItem="dNO-0B-tdt" firstAttribute="bottom" secondItem="OMk-7b-ZLS" secondAttribute="bottom" constant="25" id="XlH-8V-Pbl"/>
                             <constraint firstItem="aD2-3O-CdK" firstAttribute="leading" secondItem="dNO-0B-tdt" secondAttribute="leading" constant="20" id="bKg-gn-E8I"/>
                             <constraint firstItem="l5k-ha-QzT" firstAttribute="top" secondItem="5vs-ZM-kfp" secondAttribute="bottom" constant="15" id="bT0-SY-cvy"/>
                             <constraint firstItem="aD2-3O-CdK" firstAttribute="top" secondItem="dNO-0B-tdt" secondAttribute="top" constant="20" id="ggm-5G-bBL"/>
@@ -697,6 +714,7 @@
         <image name="ButtoncontinueButtone" width="375" height="92"/>
         <image name="SendVerifButton" width="375" height="92"/>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>
+        <image name="pinButton" width="343" height="60"/>
         <image name="questionmark.circle" catalog="system" width="128" height="121"/>
         <namedColor name="Blue">
             <color red="0.0" green="0.36100000143051147" blue="0.93300002813339233" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
