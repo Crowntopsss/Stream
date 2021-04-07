@@ -14,6 +14,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func loginToPin(_ sender: UIButton) {
+        performSegue(withIdentifier: "loginFromHome", sender:self )
 
+    }
+    
 }
 

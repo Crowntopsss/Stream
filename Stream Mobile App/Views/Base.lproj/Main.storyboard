@@ -59,6 +59,14 @@
                                     <segue destination="bB2-Mc-N84" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="Vel-Sh-ewg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ooM-Rl-CWd">
+                                <rect key="frame" x="143" y="550" width="88" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Login Button"/>
+                                <connections>
+                                    <action selector="loginToPin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aQD-JO-Ye5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -73,6 +81,9 @@
                             <constraint firstItem="BBb-np-FbH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="xSJ-sk-ATL"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <segue destination="nrp-iw-d5F" kind="presentation" identifier="loginFromHome" modalPresentationStyle="fullScreen" id="zpC-hz-bsQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -699,7 +710,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="pinField" destination="5vs-ZM-kfp" id="sao-gX-82T"/>
+                        <outlet property="pinField" destination="5vs-ZM-kfp" id="cw7-dA-Gfx"/>
+                        <segue destination="uNR-cb-NtL" kind="presentation" identifier="pinSignUpLogin" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="M5y-p6-oud"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EzV-FG-3tA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -769,7 +781,100 @@
             </objects>
             <point key="canvasLocation" x="3925.5999999999999" y="80.50974512743629"/>
         </scene>
+        <!--Pin Sign In View Controller-->
+        <scene sceneID="dNV-B9-GsX">
+            <objects>
+                <viewController id="nrp-iw-d5F" customClass="PinSignInViewController" customModule="Stream_Mobile_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gug-Ds-dWU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgK-ZH-nvI">
+                                <rect key="frame" x="20" y="20" width="24" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="YNj-5b-nHy"/>
+                                    <constraint firstAttribute="width" constant="24" id="mcW-lL-WDp"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" image="arrow.backward" catalog="system"/>
+                                <connections>
+                                    <action selector="backtoVerification:" destination="nrp-iw-d5F" eventType="touchUpInside" id="8GO-8x-9d3"/>
+                                    <action selector="bactToRegistration:" destination="TNv-9P-vd5" eventType="touchUpInside" id="SQt-Hc-oeM"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LuY-FK-i9Z" customClass="OTPFieldView" customModule="OTPFieldView">
+                                <rect key="frame" x="40" y="165" width="295" height="60"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="3y4-mw-hZb"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="App Logo" translatesAutoresizingMaskIntoConstraints="NO" id="evA-G6-KCL">
+                                <rect key="frame" x="129" y="50" width="117" height="36"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your Pin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4TM-cw-1nJ">
+                                <rect key="frame" x="126.5" y="111" width="122" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Forgot your Pin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GpG-5S-zPa">
+                                <rect key="frame" x="132" y="274.5" width="111" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RESET PIN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P4P-Zc-pNf">
+                                <rect key="frame" x="148.5" y="240" width="78" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpj-n6-qEL">
+                                <rect key="frame" x="54.5" y="597" width="266" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="266" id="bSX-J4-W9R"/>
+                                    <constraint firstAttribute="height" constant="45" id="idt-C9-IoC"/>
+                                </constraints>
+                                <state key="normal" image="pinButton"/>
+                                <connections>
+                                    <action selector="pinCreated:" destination="nrp-iw-d5F" eventType="touchUpInside" id="Ktq-En-3eW"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pdx-kp-WUB"/>
+                        <color key="backgroundColor" name="Blue"/>
+                        <constraints>
+                            <constraint firstItem="pdx-kp-WUB" firstAttribute="bottom" secondItem="hpj-n6-qEL" secondAttribute="bottom" constant="25" id="0bc-GV-FX3"/>
+                            <constraint firstItem="P4P-Zc-pNf" firstAttribute="centerX" secondItem="LuY-FK-i9Z" secondAttribute="centerX" id="G0M-6I-88k"/>
+                            <constraint firstItem="evA-G6-KCL" firstAttribute="top" secondItem="pdx-kp-WUB" secondAttribute="top" constant="50" id="HoI-A5-Pdq"/>
+                            <constraint firstItem="wgK-ZH-nvI" firstAttribute="leading" secondItem="pdx-kp-WUB" secondAttribute="leading" constant="20" id="I9H-os-VV6"/>
+                            <constraint firstItem="pdx-kp-WUB" firstAttribute="trailing" secondItem="LuY-FK-i9Z" secondAttribute="trailing" constant="40" id="KvX-ec-7nf"/>
+                            <constraint firstItem="GpG-5S-zPa" firstAttribute="centerX" secondItem="LuY-FK-i9Z" secondAttribute="centerX" id="Mci-ho-n4F"/>
+                            <constraint firstItem="wgK-ZH-nvI" firstAttribute="top" secondItem="pdx-kp-WUB" secondAttribute="top" constant="20" id="VCD-Rs-WPo"/>
+                            <constraint firstItem="GpG-5S-zPa" firstAttribute="top" secondItem="P4P-Zc-pNf" secondAttribute="bottom" constant="15" id="Vbz-Gr-oDs"/>
+                            <constraint firstItem="LuY-FK-i9Z" firstAttribute="top" secondItem="4TM-cw-1nJ" secondAttribute="bottom" constant="30" id="YBb-Li-6Uh"/>
+                            <constraint firstItem="4TM-cw-1nJ" firstAttribute="top" secondItem="evA-G6-KCL" secondAttribute="bottom" constant="25" id="Yyr-MJ-19U"/>
+                            <constraint firstItem="P4P-Zc-pNf" firstAttribute="top" secondItem="LuY-FK-i9Z" secondAttribute="bottom" constant="15" id="bGa-Lg-NCm"/>
+                            <constraint firstItem="evA-G6-KCL" firstAttribute="centerX" secondItem="pdx-kp-WUB" secondAttribute="centerX" id="bfi-Cl-ETX"/>
+                            <constraint firstItem="4TM-cw-1nJ" firstAttribute="centerX" secondItem="LuY-FK-i9Z" secondAttribute="centerX" id="cTh-JJ-YU1"/>
+                            <constraint firstItem="LuY-FK-i9Z" firstAttribute="leading" secondItem="pdx-kp-WUB" secondAttribute="leading" constant="40" id="nbQ-f4-CHg"/>
+                            <constraint firstItem="hpj-n6-qEL" firstAttribute="centerX" secondItem="pdx-kp-WUB" secondAttribute="centerX" id="p7o-TB-snK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginPinField" destination="LuY-FK-i9Z" id="ikJ-hk-cWy"/>
+                        <segue destination="uNR-cb-NtL" kind="presentation" identifier="pinLogin" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="8on-Ti-4hP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eSL-01-WJN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3161" y="782"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="8on-Ti-4hP"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="App Logo" width="117" height="36"/>
         <image name="AppLogo" width="49" height="49"/>

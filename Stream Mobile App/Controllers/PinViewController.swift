@@ -56,6 +56,8 @@ class PinViewController: UIViewController {
                     print(e)
                 }else {
                     print("successfull added data")
+                    self.performSegue(withIdentifier: "pinSignUpLogin", sender:self )
+                    
                 }
             }
             
