@@ -706,12 +706,76 @@
             </objects>
             <point key="canvasLocation" x="3160.8000000000002" y="80.50974512743629"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="1Xy-Uv-XFf">
+            <objects>
+                <viewController id="uNR-cb-NtL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lhi-gf-bed">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Home" translatesAutoresizingMaskIntoConstraints="NO" id="B6x-YC-HDy">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="CP9-Pw-vsn"/>
+                                </constraints>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e4Z-Vk-64p">
+                                <rect key="frame" x="0.0" y="199" width="375" height="468"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="VLu-94-cJz">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4s-ek-crU">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="3lT-ry-bRB"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hi5-K3-2te">
+                                                <rect key="frame" x="0.0" y="300" width="375" height="300"/>
+                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="Dxf-wp-1ZX"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="VLu-94-cJz" firstAttribute="width" secondItem="XhH-J9-sER" secondAttribute="width" id="ASD-A0-hMp"/>
+                                    <constraint firstItem="VLu-94-cJz" firstAttribute="top" secondItem="HbP-L6-0Ci" secondAttribute="top" id="H6g-xr-ahu"/>
+                                    <constraint firstItem="VLu-94-cJz" firstAttribute="bottom" secondItem="HbP-L6-0Ci" secondAttribute="bottom" id="NE3-1X-oNk"/>
+                                    <constraint firstItem="VLu-94-cJz" firstAttribute="leading" secondItem="HbP-L6-0Ci" secondAttribute="leading" id="wBy-sI-hzR"/>
+                                    <constraint firstItem="VLu-94-cJz" firstAttribute="trailing" secondItem="HbP-L6-0Ci" secondAttribute="trailing" id="zZ5-27-TCl"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="HbP-L6-0Ci"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="XhH-J9-sER"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="4sA-dN-HgC"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="B6x-YC-HDy" firstAttribute="leading" secondItem="4sA-dN-HgC" secondAttribute="leading" id="OnG-tE-H33"/>
+                            <constraint firstItem="4sA-dN-HgC" firstAttribute="trailing" secondItem="B6x-YC-HDy" secondAttribute="trailing" id="QSQ-I4-Ebm"/>
+                            <constraint firstItem="B6x-YC-HDy" firstAttribute="width" secondItem="lhi-gf-bed" secondAttribute="width" id="UpD-HH-j1f"/>
+                            <constraint firstItem="B6x-YC-HDy" firstAttribute="top" secondItem="4sA-dN-HgC" secondAttribute="top" id="cpF-Qb-4ss"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9GA-xn-MAf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3925.5999999999999" y="80.50974512743629"/>
+        </scene>
     </scenes>
     <resources>
         <image name="App Logo" width="117" height="36"/>
         <image name="AppLogo" width="49" height="49"/>
         <image name="Authentication" width="375" height="812"/>
         <image name="ButtoncontinueButtone" width="375" height="92"/>
+        <image name="Home" width="375" height="252"/>
         <image name="SendVerifButton" width="375" height="92"/>
         <image name="arrow.backward" catalog="system" width="128" height="98"/>
         <image name="pinButton" width="343" height="60"/>
@@ -730,6 +794,9 @@
         </systemColor>
         <systemColor name="systemGray2Color">
             <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
