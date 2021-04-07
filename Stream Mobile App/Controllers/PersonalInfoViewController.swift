@@ -38,7 +38,7 @@ class PersonalInfoViewController: UIViewController {
     
     @IBAction func goToPinPage(_ sender: UIButton) {
         if let birthDay = birthDate.text, let gender = genderPick.text, let phoneNo = phoneNumber.text, let fullPersonName = fullName.text, let sender = Auth.auth().currentUser?.email {
-            db.collection("PersonalInfo").addDocument(data: ["fullName" : fullPersonName, "phoneNumber":phoneNo, "gender":gender, "birthday": birthDay, "sendeer": sender]) { (error) in
+            db.collection("PersonalInfo").addDocument(data: ["fullName" : fullPersonName, "phoneNumber":phoneNo, "gender":gender, "birthday": birthDay, "sender": sender]) { (error) in
                 if let e = error{
                     print(e)
                 }else {

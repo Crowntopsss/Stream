@@ -7,9 +7,12 @@
 
 import UIKit
 import OTPFieldView
+import Firebase
 
 class PinViewController: UIViewController {
-
+    var otpPin = ""
+    
+    let db = Firestore.firestore()
     @IBOutlet weak var pinField: OTPFieldView!
     
     override func viewDidLoad() {
@@ -46,6 +49,18 @@ class PinViewController: UIViewController {
     }
     
     @IBAction func pinCreated(_ sender: Any) {
+        print(otpPin)
+        if let sender = Auth.auth().currentUser?.email {
+            db.collection("userPin").addDocument(data: ["pin": otpPin, "sender": sender]) { (error) in
+                if let e = error{
+                    print(e)
+                }else {
+                    print("successfull added data")
+                }
+            }
+            
+        }
+        
     }
 }
 extension PinViewController: OTPFieldViewDelegate {
@@ -59,6 +74,7 @@ extension PinViewController: OTPFieldViewDelegate {
     }
     
     func enteredOTP(otp otpString: String) {
+        otpPin = otpString
         print("OTPString: \(otpString)")
      
         
