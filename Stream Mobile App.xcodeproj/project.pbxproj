@@ -18,6 +18,7 @@
 		D1A08007261716CD00FAAEEE /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A08006261716CD00FAAEEE /* VerificationViewController.swift */; };
 		D1A080152617639C00FAAEEE /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A080142617639C00FAAEEE /* PersonalInfoViewController.swift */; };
 		D1A43AEB261E03D700A4D13D /* PinSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A43AEA261E03D700A4D13D /* PinSignInViewController.swift */; };
+		D1A43AEF261E31DA00A4D13D /* UserDefaultHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1A43AEE261E31DA00A4D13D /* UserDefaultHelper.swift */; };
 		D1D7333926185DF400885368 /* PinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D7333826185DF400885368 /* PinViewController.swift */; };
 		D1E4D1C1261D16EA00027C28 /* PersonalInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E4D1C0261D16EA00027C28 /* PersonalInfo.swift */; };
 		F09124E8C8970A386434138A /* Pods_Stream_Mobile_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F77E3F5EA4276DDA2FB265C /* Pods_Stream_Mobile_App.framework */; };
@@ -39,6 +40,7 @@
 		D1A08006261716CD00FAAEEE /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
 		D1A080142617639C00FAAEEE /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
 		D1A43AEA261E03D700A4D13D /* PinSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinSignInViewController.swift; sourceTree = "<group>"; };
+		D1A43AEE261E31DA00A4D13D /* UserDefaultHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultHelper.swift; sourceTree = "<group>"; };
 		D1D7333826185DF400885368 /* PinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinViewController.swift; sourceTree = "<group>"; };
 		D1E4D1C0261D16EA00027C28 /* PersonalInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfo.swift; sourceTree = "<group>"; };
 		FC884579E5F4B1982A5C40DD /* Pods-Stream Mobile App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stream Mobile App.release.xcconfig"; path = "Target Support Files/Pods-Stream Mobile App/Pods-Stream Mobile App.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		D1A07FDB2615302000FAAEEE /* Stream Mobile App */ = {
 			isa = PBXGroup;
 			children = (
+				D1A43AED261E31B400A4D13D /* helper */,
 				D1A07FFC2617110500FAAEEE /* Models */,
 				D1A07FFB261710FF00FAAEEE /* Controllers */,
 				D1A07FF626170FF500FAAEEE /* Views */,
@@ -134,6 +137,14 @@
 				D1E4D1C0261D16EA00027C28 /* PersonalInfo.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D1A43AED261E31B400A4D13D /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				D1A43AEE261E31DA00A4D13D /* UserDefaultHelper.swift */,
+			);
+			path = helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,6 +268,7 @@
 				D1A43AEB261E03D700A4D13D /* PinSignInViewController.swift in Sources */,
 				D1D7333926185DF400885368 /* PinViewController.swift in Sources */,
 				D1A08007261716CD00FAAEEE /* VerificationViewController.swift in Sources */,
+				D1A43AEF261E31DA00A4D13D /* UserDefaultHelper.swift in Sources */,
 				D1A07FDF2615302000FAAEEE /* SceneDelegate.swift in Sources */,
 				D1A080152617639C00FAAEEE /* PersonalInfoViewController.swift in Sources */,
 				D1A080032617165E00FAAEEE /* RegistrationViewController.swift in Sources */,
