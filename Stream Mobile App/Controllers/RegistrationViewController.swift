@@ -43,6 +43,7 @@ class RegistrationViewController: UIViewController {
         }
     }
     @IBAction func backToStart(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
         self.dismiss(animated: true, completion: nil)
     }
 }

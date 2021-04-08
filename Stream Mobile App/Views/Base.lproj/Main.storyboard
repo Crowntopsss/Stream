@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LwF-W8-tEq">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -13,16 +13,16 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stream_Mobile_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Stream_Mobile_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Authentication" translatesAutoresizingMaskIntoConstraints="NO" id="BBb-np-FbH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="hMz-gU-HBB">
-                                <rect key="frame" x="68.5" y="257.5" width="238.5" height="152"/>
+                                <rect key="frame" x="68.5" y="279.5" width="238.5" height="152"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Ahg-bO-IKA">
                                         <rect key="frame" x="0.0" y="0.0" width="238.5" height="48.5"/>
@@ -81,18 +81,19 @@
                             <constraint firstItem="BBb-np-FbH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="xSJ-sk-ATL"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="azh-Ld-l4f"/>
                     <connections>
                         <segue destination="nrp-iw-d5F" kind="presentation" identifier="loginFromHome" modalPresentationStyle="fullScreen" id="zpC-hz-bsQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.399999999999999" y="83.208395802098963"/>
+            <point key="canvasLocation" x="957.60000000000002" y="83.208395802098963"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="20p-JI-kxV">
             <objects>
-                <viewController id="bB2-Mc-N84" customClass="RegistrationViewController" customModule="Stream_Mobile_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RegistrationViewController" id="bB2-Mc-N84" customClass="RegistrationViewController" customModule="Stream_Mobile_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hgv-uC-SEd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -269,12 +270,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ypo-xo-v3g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="832.79999999999995" y="82.3088455772114"/>
+            <point key="canvasLocation" x="1772" y="82.3088455772114"/>
         </scene>
         <!--Verification View Controller-->
         <scene sceneID="71q-p8-2VC">
             <objects>
-                <viewController id="TNv-9P-vd5" customClass="VerificationViewController" customModule="Stream_Mobile_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VerificationViewController" id="TNv-9P-vd5" customClass="VerificationViewController" customModule="Stream_Mobile_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="10f-BH-4Dz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -366,12 +367,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wbx-tv-DSM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1576.8" y="82.3088455772114"/>
+            <point key="canvasLocation" x="2516" y="82.3088455772114"/>
         </scene>
         <!--Personal Info View Controller-->
         <scene sceneID="xgY-UH-CCN">
             <objects>
-                <viewController id="9xl-gG-KPy" customClass="PersonalInfoViewController" customModule="Stream_Mobile_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PersonalInfoViewController" id="9xl-gG-KPy" customClass="PersonalInfoViewController" customModule="Stream_Mobile_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fph-Pi-Lv1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -626,12 +627,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3bg-vN-t0L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2326" y="84"/>
+            <point key="canvasLocation" x="3264.8000000000002" y="83.208395802098963"/>
         </scene>
         <!--Pin View Controller-->
         <scene sceneID="cy3-T3-EcQ">
             <objects>
-                <viewController id="HPG-G8-SVQ" customClass="PinViewController" customModule="Stream_Mobile_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PinViewController" id="HPG-G8-SVQ" customClass="PinViewController" customModule="Stream_Mobile_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZCE-V3-dcR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -716,7 +717,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EzV-FG-3tA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3160.8000000000002" y="80.50974512743629"/>
+            <point key="canvasLocation" x="4100" y="80.50974512743629"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="1Xy-Uv-XFf">
@@ -779,12 +780,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9GA-xn-MAf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3925.5999999999999" y="80.50974512743629"/>
+            <point key="canvasLocation" x="4864.8000000000002" y="80.50974512743629"/>
         </scene>
         <!--Pin Sign In View Controller-->
         <scene sceneID="dNV-B9-GsX">
             <objects>
-                <viewController id="nrp-iw-d5F" customClass="PinSignInViewController" customModule="Stream_Mobile_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PinSignInViewController" id="nrp-iw-d5F" customClass="PinSignInViewController" customModule="Stream_Mobile_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gug-Ds-dWU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -870,6 +871,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eSL-01-WJN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3161" y="782"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="yhD-Jn-HQW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LwF-W8-tEq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="o6q-z4-3au">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="uGI-xq-nrj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MWS-wm-Qor" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.399999999999999" y="83.208395802098963"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
