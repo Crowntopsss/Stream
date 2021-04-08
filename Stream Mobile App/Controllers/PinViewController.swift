@@ -12,6 +12,8 @@ import Firebase
 class PinViewController: UIViewController {
     var otpPin = ""
     
+    let defaults = UserDefaults.standard
+    
     let db = Firestore.firestore()
     @IBOutlet weak var pinField: OTPFieldView!
     
@@ -55,6 +57,7 @@ class PinViewController: UIViewController {
                 if let e = error{
                     print(e)
                 }else {
+                    UserDefaultHelper.loginStatus(status: true)
                     print("successfull added data")
                     self.performSegue(withIdentifier: "pinSignUpLogin", sender:self )
                     
